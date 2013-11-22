@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="cordova.js"></script>
+        <script src="jquery.js"></script>
+		<script>
+			document.addEventListener('deviceready', function() {
+				var smsInboxPlugin = cordova.require('cordova/plugin/smsinboxplugin');
+				  smsInboxPlugin.isSupported ((function(supported) {
+				if(supported) 
+				  alert("SMS supported !");
+				else
+				  alert("SMS not supported");
+				}), function() {
+				alert("Error while checking the SMS support");
+				});
+				 smsInboxPlugin.startReception (function(msg) {
+				alert(msg);
+			  }, function() {
+				alert("Error while receiving messages");
+			  });
+			}
+		  );
+		</script>
+    </head>
+	<body>
+	
+	
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.pm.sms"
+        version   = "3.0.0">
+    <name>SMS</name>
+
+    <description>
+        SMS
+    </description>
+
+    <author href="http://www.projectmaker.com.br" email="alfredo@projectmaker.com.br">
+     Project Maker
+    </author>
+ 
+ 
+	<gap:plugin name="org.apache.cordova.dialogs"   />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<plugin name="SmsInboxPlugin" value="org.apache.cordova.plugin.SmsInboxPlugin"/>
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	<feature name="http://api.phonegap.com/1.0/media"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+
+    <preference name="phonegap-version" value="3.0.0" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="true" />
+    <icon src="icon.png" />
+	<access origin="*"/>
+</widget>
